@@ -1,23 +1,246 @@
-/*
-To customize the look and feel of Ionic, you can override the variables
-in ionic's _variables.scss file.
-
-For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
-*/
-
-// The path for our ionicons font files, relative to the built CSS in www/css
+$positive: #000000;
+$assertive: #AE0000;
+$royal: #CCCCCC;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss/ionic";
+.account-number {
+	margin-top: 10vh !important;
+}
 
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
+.mt2vh {
+	margin-top: 2vh;
+}
 
+.input {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.login_element {
+	margin-left: 15vw;
+	margin-right: 15vw;
+	width: 70%;
+}
+
+.start_button {
+	margin-top: 5vh;
+}
+
+.forgot_number {
+	text-decoration: underline !important;
+	margin-top: 10px;
+}
+
+.change_new_account_position {
+	margin-top: 5vh;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.dn {
+	display: none !important;
+}
+
+.login_image {
+	margin: 4vh 0;
+}
+
+.register_container {
+	margin: 1vh 3vw;
+}
+
+.registration-input {
+	border: none;
+	outline: none;
+	margin: 1vh 0;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.close-to-heading {
+	margin-top: 0 !important;
+	margin-bottom: 0;
+}
+
+.half-width {
+	width: 45%;
+	height: 70px;
+	display: inline-block;
+	margin-right: 3%;
+}
+
+.typical-input {
+	border-bottom: 1px solid #ccc}
+.registration-part--container {
+	margin-top: 3vh;
+}
+
+.sign-up--button {
+	margin-top: 4vh !important;
+}
+
+.product-item {
+	max-width: 125px;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #ccc;
+	margin-right: 15px;
+	margin-bottom: 20px;
+}
+
+.products_container {
+	margin: 0 1vw;
+	padding: 0 1.5vw;
+}
+
+.product-image {}
+.products-container--items {
+	margin-top: 4vh;
+	padding: 0 !important;
+}
+
+.align-center {
+	margin: 0 20vw;
+}
+
+.footer-container {
+	border-top: 1px solid #ccc;
+	background-color: #fcfcfc;
+	padding: 10px 0;
+}
+
+.brand-icon {
+	display: inline-block;
+	padding: 2px 30px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.size-of-brand--select {
+	display: inline-block;
+	margin-right: 10px;
+	width: 170px;
+	height: 50px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.shape-image {
+	display: inline-block;
+	width: 100px;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.size-container {
+	position: relative;
+	clear: both;
+	height: 300px}
+.fitasize-shopper--red-button {
+	transform: translateY(50px);
+}
+
+.best-size--color {
+	color: red;
+}
+
+.ml20 {
+	margin-left: 20px;
+}
+
+.dib {
+	display: inline-block;
+	width: 100%;
+}
+
+.grey-backgorund {
+	background: #eee;
+	margin-left: 20px;
+	padding: 15px 10px;
+	width: 80%;
+}
+
+.button {
+	padding: 0 20px;
+}
+
+.bg-grey {
+	background: #eee;
+	width: 80%;
+	padding: 15px;
+}
+
+.sleeve-length--input {
+	margin: 20px 0;
+	width: 50%;
+}
+
+.save {
+	padding: 0 50px;
+}
+
+.use-previous-card {
+	background: #ccc}
+.no-border {
+	border: none !important;
+	outline: none !important;
+}
+
+.fwb {
+	font-weight: bold;
+}
+
+.tab-active {
+	border-top: 1px solid #ccc !important;
+	border-right: 1px solid #ccc !important;
+	border-left: 1px solid #ccc !important;
+	background-color: #fff !important;
+}
+
+label > input.ng-invalid.ng-touched {
+	color: red;
+}
+
+.fix-padding--on-payment-page {
+	padding: 0 15px;
+}
+
+.square-checkbox .checkbox-icon::before {
+	border-radius: 0 !important;
+}
+
+.estimated {
+	color: $assertive !important;
+	height: 25px;
+	overflow: hidden;
+}
+
+.estimated::before {
+	content: '★';
+	display: block;
+	font-size: 40px;
+	padding-bottom: 10px;
+	color: $assertive !important;
+}
+
+.custom--ionic-select {
+	max-width: 100% !important;
+}
+
+.payment-tab--button {
+	margin-left: 5px;
+	margin-right: 5px;
+}

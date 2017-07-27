@@ -1,0 +1,26 @@
+<ion-view title="Authorization" id="page2">
+  <ion-content padding="true" class="has-header">
+    <div class="login_image">
+      <img src="img/J9ZSzkccScyDuwNn1OoW_Logo.jpg" style="display: block; width: 40vw; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div id="authorization-container1">
+      <form id="authorization-form6" class="list" name="authorizationForm">
+        <label class="item item-input input account-number login_element" id="authorization-input6" name="account_number">
+          <input type="number" placeholder="Select Account Number" ng-model="authorizationForm.sellerAccountNumber" ng-required="true" required="true">
+        </label>
+      </form>
+    </div>
+    <div id="authorization-container2">
+      <form id="authorization-form7" class="list" name="authorizationForm">
+        <label class="item item-input input login_element mt2vh" id="authorization-input8" name="account_secret">
+          <input type="text" placeholder="Account Secret Key" ng-model="authorizationForm.secretKey" ng-reguired="true" required="true">
+        </label>
+      </form>
+    </div>
+    <button id="authorization-button2" ng-click="authorize(authorizationForm)" ng-disabled="authorizationForm.$invalid" class="button button-positive login_element start_button send">Start Fitting</button>
+    <div id="authorization-container10">
+      <a ui-sref="passwordRecovery()" id="authorization-button8" style="font-size:15px;text-align:right;" class="button button-positive button-block button-clear login_element forgot_number">Forgot Account Number or Secret Key?</a>
+    </div>
+    <a ui-sref="tabsController.registrationForm()" id="authorization-button3" class="button button-assertive login_element change_new_account_position">New Account</a>
+  </ion-content>
+</ion-view>

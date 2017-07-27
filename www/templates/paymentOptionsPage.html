@@ -1,0 +1,192 @@
+<ion-view title="Payment options page" id="page12" ng-init="getSavedCards()">
+  <ion-content padding="false" class="has-header">
+    <div id="paymentOptionsPage-container61" class="products_container">
+      <div id="paymentOptionsPage-container57">
+        <div class="spacer" style="height: 10px;"></div>
+        <h5 id="paymentOptionsPage-heading11" style="color:#000000;">Custom Fitting Order (USD 50.00, 15 days)</h5>
+        <div id="paymentOptionsPage-markdown51" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">Additional Shoper Instructions (Optional)</p>
+        </div>
+
+        <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input29" name="fitting-order--additional-info">
+          <input type="text" placeholder="Max 200 characters">
+        </label>
+        <div class="spacer" style="width: 729.625px; height: 19px;"></div>
+        <h5 id="paymentOptionsPage-heading13" style="color:#000000;">Payment Details</h5>
+
+        <div id="paymentOptionsPage-button-bar1" class="button-bar">
+          <button id="paymentOptionsPage-button25" ng-click="showTab(1)" ng-class="{'tab-active': showedTab ===1 }" class="button button-stable button-block icon visa-icon payment-tab--button"> Enter Card
+            <img src="../img/svg/visa_mc.svg" class="fr" style="" alt=""> </button>
+          <button id="paymentOptionsPage-button26" ng-click="showTab(2)" ng-class="{'tab-active': showedTab === 2 }" style="color:#212121;" class="button button-stable button-block icon paypal-icon payment-tab--button">Send Invoice
+            <img src="../img/svg/paypal.svg" class="fr" alt="PayPal"></button>
+          <button id="paymentOptionsPage-button27" ng-click="showTab(3)" ng-class="{'tab-active': showedTab === 3 }" style="color:#212121;" class="button button-stable button-block icon icon square-icon payment-tab--button">
+            <img src="../img/svg/square_swipe_card.svg" class="fr" alt="Square">
+           Swipe Card</button>
+        </div>
+
+
+        <div id="paymentOptionsPage-container62">
+          <div id="paymentOptionsPage-container63" name="cardPaymentInfo" ng-show="showedTab === 1" class="fix-padding--on-payment-page">
+
+            <form id="paymentOptionsPage-form28" class="list" name="cardPaymentForm">
+              <div class="grey-background">
+                <label class="item item-select typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-select11">
+                  <span class="input-label">Use Previous Card</span>
+                  <select>
+                    <option>VISA ****4728</option>
+                    <option></option>
+                  </select>
+                </label>
+                <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input31">
+                  <span class="input-label">CVV</span>
+                  <input type="text" placeholder="">
+                </label>
+              </div>
+              <div class="spacer" style="width: 729.625px; height: 32px;"></div>
+              <div id="paymentOptionsPage-markdown52" class="show-list-numbers-and-dots">
+                <p style="color:#747373;">Use New Card</p>
+              </div>
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input32" name="check-out--card-name">
+                <span class="input-label">Name of Card</span>
+                <input type="text" placeholder="" ng-model="cardPaymentForm.nameOfCard" required ng-required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input33" name="check-out--card-number">
+                <span class="input-label">Card Number</span>
+                <input type="number" placeholder="" ng-model="cardPaymentForm.cardNumber" ng-required="true" required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input34">
+                <span class="input-label">Expire Date</span>
+                <input type="text" placeholder="(MM YY)" ng-model="cardPaymentForm.expireDate" required ng-required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input35">
+                <span class="input-label">CVV</span>
+                <input type="text" placeholder="" ng-model="cardPaymentForm.cvv" required ng-required="true">
+              </label>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+              <h5 id="paymentOptionsPage-heading14" style="color:#000000;">Billing Address</h5>
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input36" name="checkOutCardAddress">
+                <span class="input-label">Address</span>
+                <input type="text" placeholder="" ng-model="cardPaymentForm.billingAddress" required ng-required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input37" name="checkOutCardCity">
+                <span class="input-label">City</span>
+                <input type="text" placeholder="" ng-model="cardPaymentForm.billingCity" required ng-required="true">
+              </label>
+              <label class="item item-select typical-input close-to-heading registration-input half-width custom--ionic-select" id="paymentOptionsPage-select13" name="check-out--card-state">
+                <span class="input-label">State</span>
+                <select ng-model="cardPaymentForm.billingState" >
+                  <option>Select State</option>
+                  <option>Alabama</option>
+                  <option>Alaska</option>
+                  <option>Arizona</option>
+                  <option>Arkansas</option>
+                  <option>California</option>
+                  <option>Colorado</option>
+                  <option>Connecticut</option>
+                  <option>Delaware</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Hawaii</option>
+                  <option>Idaho</option>
+                  <option>Illinois</option>
+                  <option>Indiana</option>
+                  <option>Iowa</option>
+                  <option>Kansas</option>
+                  <option>Kentucky</option>
+                  <option>Louisiana</option>
+                  <option>Maine</option>
+                  <option>Maryland</option>
+                  <option>Massachusetts</option>
+                  <option>Michigan</option>
+                  <option>Minnesota</option>
+                  <option>Mississippi</option>
+                  <option>Missouri</option>
+                  <option>Montana</option>
+                  <option>Nebraska</option>
+                  <option>Nevada</option>
+                  <option>New Hampshire</option>
+                  <option>New Jersey</option>
+                  <option>New Mexico</option>
+                  <option>New York</option>
+                  <option>North Carolina</option>
+                  <option>North Dakota</option>
+                  <option>Ohio</option>
+                  <option>Oklahoma</option>
+                  <option>Oregon</option>
+                  <option>Pennsylvania</option>
+                  <option>Rhode Island</option>
+                  <option>South Carolina</option>
+                  <option>South Dakota</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Utah</option>
+                  <option>Vermont</option>
+                  <option>Virginia</option>
+                  <option>Washington</option>
+                  <option>West Virginia</option>
+                  <option>Wisconsin</option>
+                  <option>Wyoming</option>
+                </select>
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input38" name="check-out--card-city">
+                <span class="input-label">Email Address</span>
+                <input type="email" placeholder="regina@example.com" ng-model="cardPaymentForm.billingEmailAddress" required ng-required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input39" name="check-out--card-zip">
+                <span class="input-label">Zip Code</span>
+                <input type="number" placeholder="" ng-model="cardPaymentForm.billingZipcode" required ng-required="true">
+              </label>
+              <label class="item item-input typical-input close-to-heading registration-input half-width" id="paymentOptionsPage-input40" name="check-out--card-zip">
+                <span class="input-label">Telephone</span>
+                <input type="tel" placeholder="+1 310 345-2345" ng-model="cardPaymentForm.billingTelephone" required ng-required="true">
+              </label>
+              <div class="spacer" style="width: 729.625px; height: 14px;"></div>
+              <ion-checkbox id="paymentOptionsPage-checkbox1" name="save-card-for-reuse--false" ng-model="cardPaymentForm.saveCardForReuse" class="no-border fwb square-checkbox">Save Card for Reuse</ion-checkbox>
+              <div class="spacer" style="width: 729.625px; height: 33px;"></div>
+              <button id="paymentOptionsPage-button28"  ng-disabled="cardPaymentForm.$invalid"  ng-click="submitOrder( cardPaymentForm )" class="button button-assertive button-block">Submit Order</button>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+            </form> <!--END cardPaymentForm-->
+          </div>
+          <div id="paymentOptionsPage-container22" name="paypalPaymentInfo" ng-show="showedTab === 2" class="fix-padding--on-payment-page">
+
+            <form id="paymentOptionsPage-form30" class="list" cardpaymentform="paypalPaymentForm">
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input46" name="check-out--paypal-email">
+                <span class="input-label">Paypal Email Address</span>
+                <input type="email" placeholder="regina@example.com" ng-model="cardPaymentForm.paypalEmailAddress">
+              </label>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input44" name="check-out--card-address">
+                <span class="input-label">Note to shopper</span>
+                <input type="text" placeholder="optional" ng-model="cardPaymentForm.billingAddress">
+              </label>
+              <div class="spacer" style="width: 729.625px; height: 14px;"></div>
+              <div class="spacer" style="width: 729.625px; height: 33px;"></div>
+              <button id="paymentOptionsPage-button16" class="button button-assertive button-block">Request Payment</button>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+            </form> <!--END paypalPaymentForm-->
+          </div>
+
+
+          <div id="paymentOptionsPage-container33" name="swipePaymentInfo" ng-show="showedTab === 3" class="fix-padding--on-payment-page">
+            <form id="paymentOptionsPage-form31" class="list" name="swipePaymentForm">
+              <label class="item item-input typical-input close-to-heading registration-input" id="paymentOptionsPage-input50" name="check-out--paypal-email">
+                <span class="input-label">Note to shopper</span>
+                <input type="text" placeholder="optional" ng-model="cardPaymentForm.notesToShopper">
+              </label>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+              <div id="paymentOptionsPage-markdown29" class="show-list-numbers-and-dots">
+                <p style="color:#000000;">
+                  <strong>Swipe card to charge user</strong>
+                </p>
+              </div>
+              <div class="spacer" style="width: 729.625px; height: 14px;"></div>
+              <div class="spacer" style="width: 729.625px; height: 33px;"></div>
+              <button id="paymentOptionsPage-button19" class="button button-assertive button-block">Charge Card</button>
+              <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+            </form> <!--END swipePaymentForm-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,126 @@
+<ion-view title="Products" id="page11">
+  <ion-content padding="true" class="has-header">
+    <div id="products2-container50" class="products_container">
+      <div id="products2-container31">
+        <form id="products2-form19" class="list">
+          <label class="item item-input typical-input close-to-heading registration-input half-width" id="products2-search6">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="Search Item Name Or SKU">
+          </label>
+          <label class="item item-select typical-input close-to-heading registration-input half-width" id="products2-select10">
+            <span class="input-label">Filter by</span>
+            <select>
+              <option>Featured</option>
+            </select>
+          </label>
+        </form>
+      </div>
+      <div id="products2-container47" class="products-container--items">
+        <div id="products2-container32" class="product-item">
+          <div class="product-image">
+            <img src="img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG" style="display: block; width: 80%; margin-left: auto; margin-right: auto;">
+          </div>
+          <div id="products2-markdown19" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">True Love Skinny Jeans
+              <strong>From $49.99</strong>
+            </p>
+          </div>
+        </div>
+        <div id="products2-container40" class="product-item">
+          <div class="product-image">
+            <img src="img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG" style="display: block; width: 80%; margin-left: auto; margin-right: auto;">
+          </div>
+          <div id="products2-markdown21" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">True Love Skinny Jeans
+              <strong>From $49.99</strong>
+            </p>
+          </div>
+        </div>
+        <div id="products2-container42" class="product-item">
+          <div class="product-image">
+            <img src="img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG" style="display: block; width: 80%; margin-left: auto; margin-right: auto;">
+          </div>
+          <div id="products2-markdown22" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">True Love Skinny Jeans
+              <strong>From $49.99</strong>
+            </p>
+          </div>
+        </div>
+        <div id="products2-container43" class="product-item">
+          <div class="product-image">
+            <img src="img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG" style="display: block; width: 80%; margin-left: auto; margin-right: auto;">
+          </div>
+          <div id="products2-markdown24" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">True Love Skinny Jeans
+              <strong>From $49.99</strong>
+            </p>
+          </div>
+        </div>
+        <div id="products2-container45" class="product-item">
+          <div class="product-image">
+            <img src="img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG" style="display: block; width: 80%; margin-left: auto; margin-right: auto;">
+          </div>
+          <div id="products2-markdown25" style="text-align:center;" class="show-list-numbers-and-dots">
+            <p style="color:#000000;">True Love Skinny Jeans
+              <strong>From $49.99</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="products2-container52">
+      <h5 id="products2-heading9" style="color:#000000;">The size of the Cozy Loose Turtleneck Top that fits best is
+        <span class="best-size--color">US Size 2 (Small) </span>
+      </h5>
+      <div class="spacer" style="height: 27px;"></div>
+      <div id="products2-container53">
+        <div class="shape-image fl">
+          <img src="img/Zpdr0SgVSIC5gIQJRdbm_body-sizes.JPG" style="display: block; width: 121%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+      </div>
+    </div>
+    <div id="products2-container54" class="fl grey-backgorund">
+      <div id="products2-markdown28" class="show-list-numbers-and-dots fl">
+        <p style="color:#000000;">In the shopper's opinion, this fitting is</p>
+      </div>
+      <div id="products2-markdown34" ng-click="estimate(5)" ng-class="{'estimated': rating >= 5}" class="show-list-numbers-and-dots fr">
+        <p style="font-size:40px;">☆</p>
+      </div>
+      <div id="products2-markdown40" ng-click="estimate(4)" ng-class="{'estimated': rating >= 4 }" class="show-list-numbers-and-dots fr">
+        <p style="font-size:40px;">☆</p>
+      </div>
+      <div id="products2-markdown41" ng-click="estimate(3)" ng-class="{'estimated': rating >=3}" class="show-list-numbers-and-dots fr">
+        <p style="font-size:40px;">☆</p>
+      </div>
+      <div id="products2-markdown49" ng-click="estimate(2)" ng-class="{'estimated': rating >=2}" class="show-list-numbers-and-dots fr">
+        <p style="font-size:40px;">☆</p>
+      </div>
+      <div id="products2-markdown43" ng-click="estimate(1)" ng-class="{'estimated':rating >= 1}" class="show-list-numbers-and-dots fr">
+        <p style="font-size:40px;">☆</p>
+      </div>
+    </div>
+    <div class="spacer" style="height: 90px;"></div>
+    <div id="products2-container55" class="fl">
+      <form id="products2-form22" class="list" name="sendFitDetailsForm">
+        <label class="item item-input fl ml20 input" id="products2-input23">
+          <span class="input-label">Save to:</span>
+          <input type="text" placeholder="Shopper's Email or Telephone" ng-model="sendFitDetailsForm.saveTo" ng-required="true" required="true">
+        </label>
+        <button id="products2-button12" ng-disabled="sendFitDetailsForm.$invalid" ng-click="sendFitDetails(sendFitDetailsForm)" class="button button-positive ml20">Send Fit Details</button>
+        <div class="spacer" style="height: 30px;"></div>
+      </form>
+    </div>
+    <div id="products2-container56" class="fl ml20 bg-grey">
+      <h5 id="products2-heading10" style="color:#000000;">Sleeve Length</h5>
+      <form id="products2-form23" class="list" name="saveMeasurementForm">
+        <label class="item item-input input sleeve-length--input" id="products2-input26">
+          <input type="number" placeholder="in" ng-model="saveMeasurementForm.sleeveLength" ng-requrired="true" required="true">
+        </label>
+        <div id="products2-markdown45" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">Place the hand on the hi so the arm is bent. Measure from the shoulder bone, over the elbow and down to the wrst bone to where you want the sleeve to end.</p>
+        </div>
+        <button id="products2-button14" ng-disabled="saveMeasurementForm.$invalid" class="button button-positive save">Save</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

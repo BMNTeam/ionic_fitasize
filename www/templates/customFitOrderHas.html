@@ -1,0 +1,88 @@
+<ion-view title="Custom Fit Order/has" id="page13">
+  <ion-content padding="false" class="has-header">
+    <div id="customFitOrderHas-container60" class="products_container">
+      <div id="customFitOrderHas-container59">
+        <div class="spacer" style="height: 10px;"></div>
+        <h5 id="customFitOrderHas-heading12" style="color:#328C09;">The custom fitting order has been sent.</h5>
+        <div class="list">
+          <div class="spacer" style="width: 729.625px; height: 37px;"></div>
+          <h5 style="color:#000000;">Internal Order Tracking</h5>
+          <div class="button-bar">
+            <button ng-class="{'tab-active': showedTab ===1 }" ng-click="showTab(1)" class="button button-stable button-block">I have an order number</button>
+            <button ng-class="{'tab-active':showedTab === 2}" ng-click="showTab(2)" style="color:#212121;" class="button button-stable button-block">I do not have an order number</button>
+          </div>
+          <div class="fix-padding--on-payment-page">
+            <div ng-show="showedTab === 1">
+
+              <form class="list" name="customOrderTrackingForm">
+                <div class="spacer" style="width: 729.625px; height: 12px;"></div>
+                <label class="item item-input typical-input close-to-heading registration-input" name="check-out--receipt-number">
+                  <span class="input-label">Nerdsway Order/Receipt Number:</span>
+                  <input type="text" placeholder="" ng-model="customOrderTrackingForm.orderNumber" ng-required="true" required="true">
+                </label>
+                <div class="spacer" style="width: 729.625px; height: 49px;"></div>
+                <button ng-click="addTracking(customOrderTrackingForm)" ng-disabled="customOrderTrackingForm.$invalid" class="button button-positive button-block">Add Tracking</button>
+              </form>
+
+            </div>
+            <div ng-show="showedTab === 2">
+
+              <form class="list" name="customFitOrderForm">
+                <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+                <div class="show-list-numbers-and-dots">
+                  <p style="color:#000000;font-size:16px;">Some Fitasize will send a link to the shopper to add the Nerdsway order number when they receive it from you.</p>
+                </div>
+                <div class="spacer" style="width: 729.625px; height: 12px;"></div>
+                <label class="item item-input typical-input close-to-heading registration-input" name="check-out--receipt-number">
+                  <span class="input-label">Send link to</span>
+                  <input name="linkTo" type="text" placeholder="email or telephone" ng-model="customFitOrderForm.linkTo" ng-required="true" required="true" ng-minlength="5">
+                </label>
+                <div class="spacer" style="width: 729.625px; height: 49px;"></div>
+                <button ng-click="sendOrderNumberLink(customFitOrderForm)" ng-disabled=" customFitOrderForm.linkTo === undefined" class="button button-positive button-block">Send Order Number Link</button>
+                <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <form id="customFitOrderHas-form35" class="list" ng-show="false">
+          <div class="spacer" style="width: 729.625px; height: 37px;"></div>
+          <h5 id="customFitOrderHas-heading16" style="color:#000000;">Internal Order Tracking</h5>
+          <div id="customFitOrderHas-button-bar4" class="button-bar">
+            <button id="customFitOrderHas-button21" ng-class="{'tab-active': showedTab ===1 }" ng-click="showTab(1)" class="button button-stable button-block">I have an order number</button>
+            <button id="customFitOrderHas-button22" ng-class="{'tab-active':showedTab === 2}" ng-click="showTab(2)" style="color:#212121;" class="button button-stable button-block">I do not have an order number</button>
+          </div>
+          <div id="customFitOrderHas-container37" class="fix-padding--on-payment-page">
+            <div id="customFitOrderHas-container35" ng-show="showedTab === 1">
+              <form id="customFitOrderHas-form33" class="list" name="customOrderTrackingForm">
+                <div class="spacer" style="width: 729.625px; height: 12px;"></div>
+                <label class="item item-input typical-input close-to-heading registration-input" id="customFitOrderHas-input28" name="check-out--receipt-number">
+                  <span class="input-label">Nerdsway Order/Receipt Number:</span>
+                  <input type="text" placeholder="" ng-model="customOrderTrackingForm.orderNumber" ng-required="true" required="true">
+                </label>
+                <div class="spacer" style="width: 729.625px; height: 49px;"></div>
+                <button id="customFitOrderHas-button34" ng-click="addTracking(customOrderTrackingForm)" ng-disabled="customOrderTrackingForm.$invalid" disabled="" class="button button-positive button-block">Add Tracking</button>
+              </form>
+            </div>
+            <div id="customFitOrderHas-container36" ng-show="showedTab === 2">
+              <form id="customFitOrderHas-form34" class="list" name="customFitOrderForm">
+                <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+                <div id="customFitOrderHas-markdown30" class="show-list-numbers-and-dots">
+                  <p style="color:#000000;font-size:16px;">Some Fitasize will send a link to the shopper to add the Nerdsway order number when they receive it from you.</p>
+                </div>
+                <div class="spacer" style="width: 729.625px; height: 12px;"></div>
+                <label class="item item-input typical-input close-to-heading registration-input" id="customFitOrderHas-input41" name="check-out--receipt-number">
+                  <span class="input-label">Send link to</span>
+                  <input type="text" placeholder="email or telephone" ng-model="customSendOrderNumberForm.linkTo">
+                </label>
+                <div class="spacer" style="width: 729.625px; height: 49px;"></div>
+                <button id="customFitOrderHas-button35" ng-click="sendOrderNumberLink(customSendOrderNumberForm)" ng-disabled="customSendOrderNumberForm.$invalid" class="button button-positive button-block">Send Order Number Link</button>
+                <div class="spacer" style="width: 729.625px; height: 24px;"></div>
+              </form>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

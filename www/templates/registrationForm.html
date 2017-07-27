@@ -1,0 +1,99 @@
+<ion-view title="Registration Form" id="page6">
+  <ion-content padding="true" class="has-header">
+    <div>
+      <img src="img/J9ZSzkccScyDuwNn1OoW_Logo.jpg" style="display: block; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div id="registrationForm-container7" class="register_container">
+      <form id="registrationForm-form10" class="list" name="registrationForm" novalidate="true">
+        <div id="registrationForm-markdown6" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">
+            <strong>Want to use Fitasize in your business</strong>
+          </p>
+        </div>
+        <div id="registrationForm-markdown7" class="show-list-numbers-and-dots">
+          <p style="color:#000000;">Please fill out the form details below and our representative will contact you to start the signup process.</p>
+        </div>
+        <div></div>
+        <label class="item item-input registration-input typical-input" id="registrationForm-input13" name="registrationForm.companyName">
+          <span class="input-label">Company Name *:</span>
+          <input type="text" placeholder="" ng-model="registrationForm.companyName" ng-minlength="6" required="">
+        </label>
+        <div id="registrationForm-container11" class="registration-part--container">
+          <form id="registrationForm-form11" class="list">
+            <div id="registrationForm-markdown8" class="show-list-numbers-and-dots">
+              <p style="color:#000000;font-size:16px;">
+                <strong>Contact</strong>
+              </p>
+            </div>
+            <label class="item item-input close-to-heading registration-input typical-input" id="registrationForm-input11" name="full-name">
+              <span class="input-label">Full Name *:</span>
+              <input type="text" placeholder="" ng-model="registrationForm.fullName" ng-minlength="5" ng-requiired="true" required="true">
+            </label>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input14" name="contact-email">
+              <span class="input-label">Email Address *:</span>
+              <input type="email" placeholder="regina@example.com" ng-model="registrationForm.userEmail" ng-required="true" required="true">
+            </label>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input12" name="contact-cellphone">
+              <span class="input-label">Cellphone *:</span>
+              <input type="tel" placeholder="+1 310 345-2345" ng-model="registrationForm.cellPhone" ng-required="true" required="true">
+            </label>
+          </form>
+        </div>
+        <div id="registrationForm-container12" class="registration-part--container">
+          <form id="registrationForm-form12" class="list">
+            <div id="registrationForm-markdown9" class="show-list-numbers-and-dots">
+              <p style="color:#000000;font-size:16px;">
+                <strong>Company Address</strong>
+              </p>
+            </div>
+            <label class="item item-input close-to-heading registration-input typical-input" id="registrationForm-input15" name="company-address-address">
+              <span class="input-label">Address *:</span>
+              <input type="text" placeholder="" ng-model="registrationForm.companyAddress" ng-required="true" required="true">
+            </label>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input16" name="company-address-city">
+              <span class="input-label">City *:</span>
+              <input type="text" placeholder="" ng-model="registrationForm.companyCity" ng-required="true" required="true">
+            </label>
+            <label class="item item-select typical-input close-to-heading registration-input half-width" id="registrationForm-select1">
+              <span class="input-label">State *</span>
+              <select ng-model="registrationForm.companyState">
+                <option>California</option>
+                <option>Colorado</option>
+              </select>
+            </label>
+            <label class="item item-input item-stacked-label typical-input close-to-heading registration-input half-width" id="registrationForm-input18" name="company-address-email">
+              <span class="input-label">Email Address *:</span>
+              <input type="email" placeholder="regina@example.com" ng-model="registrationForm.companyEmail" ng-required="true" required="true">
+            </label>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input19" name="company-address-zip">
+              <span class="input-label">Zip Code *:</span>
+              <input type="number" placeholder="" ng-model="registrationForm.companyZip" ng-required="true" required="true">
+            </label>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input20" name="company-address-telephone">
+              <span class="input-label">Telephone *:</span>
+              <input type="tel" placeholder="+1 310 345-2345" ng-model="registrationForm.companyPhone" ng-required="true" required="true">
+            </label>
+          </form>
+        </div>
+        <div id="registrationForm-container13" class="registration-part--container">
+          <form id="registrationForm-form13" class="list">
+            <div id="registrationForm-markdown10" class="show-list-numbers-and-dots">
+              <p style="color:#000000;font-size:16px;">
+                <strong>Usage</strong>
+              </p>
+            </div>
+            <label class="item item-input typical-input close-to-heading registration-input half-width" id="registrationForm-input22" name="company-address-city">
+              <span class="input-label">Number of Items:</span>
+              <input type="text" placeholder="Enter Estimate" ng-model="registrationForm.numberOfItems">
+            </label>
+            <label class="item item-select typical-input close-to-heading registration-input half-width" id="registrationForm-select2">
+              <span class="input-label">Annual Turnover</span>
+              <select ng-model="registrationForm.annualTurnover"></select>
+            </label>
+            <button id="registrationForm-button6" ng-click="createAccount(registrationForm)" ng-disabled="registrationForm.$invalid" class="button button-positive button-block start_button sign-up--button">Sign Up</button>
+          </form>
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
