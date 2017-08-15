@@ -7,10 +7,10 @@
         <form id="cozyLooseTurtleneckTop-form21" class="list">
           <label class="item item-input typical-input close-to-heading registration-input" id="cozyLooseTurtleneckTop-search5">
             <i class="icon ion-search placeholder-icon"></i>
-            <input type="search" placeholder="What brand of tops does user usually wear?">
+            <input type="search" ng-model="filterBrand.search" placeholder="What brand of tops does user usually wear?">
           </label>
         </form>
-        <div ng-repeat="brand in brandsList">
+        <div ng-repeat="brand in brandsList | filter:filterBrand.search">
 
           <button style="color:#666666;border-radius:26px 26px 26px 26px;" class="button button-royal button-small brand-icon fl">{{ brand.name}}</button>
 

@@ -6,39 +6,15 @@ angular.module('productsModule', [])
 .service('ProductsService', ['$http', function($http){
     
     var apiUrl = 'https://api.fitasize.com/v1/';
-    
-    this.getProducts = function() {
-        var products = {
-            count: 3,
-            data: [{
-                id: '2',
-                sku: 'hello',
-                image_url: "img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG",
-                item_name: 'Jeans',
-                starting_price: '200'
 
-            },
-            {
-                id: '3',
-                sku: 'who knows',
-                image_url: "img/CZW92fuR2OibY1YbgnWE_Product-goup.JPG",
-                item_name: 'Coat',
-                starting_price: '100' 
-            }
-            ]
-        }
-        return new Promise( function (resolve, reject){
-            resolve(products);
-        });
-    }
     
-    this.viewItemList = function() {
+    this.viewItemList = function(productsForm) {
         var req = {
             method: "GET",
             url: apiUrl + 'item/search',
             params: {
-                filter: "M",
-                //search_phrase: "",
+                filter: productsForm.filter,
+                search_phrase: productsForm.search,
                 //query_id: ''
             }
         }
@@ -48,7 +24,7 @@ angular.module('productsModule', [])
                 .then(
                     (respond) => {
                         console.log(respond),
-                        resolve(respond)
+                        resolve(respond.data)
                     },
                     (error) => {
                         console.log(error);

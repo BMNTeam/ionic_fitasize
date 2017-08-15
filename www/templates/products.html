@@ -5,12 +5,13 @@
         <form id="products-form18" class="list">
           <label class="item item-input typical-input close-to-heading registration-input half-width" id="products-search1">
             <i class="icon ion-search placeholder-icon"></i>
-            <input type="search" placeholder="Search Item Name Or SKU" ng-model="produstsForm.search" ng-change="receiveProducts(productsForm)">
+            <input type="search" placeholder="Search Item Name Or SKU" ng-model="productsForm.search" ng-change="receiveProducts(productsForm)">
           </label>
           <label class="item item-select typical-input close-to-heading registration-input half-width" id="products-select5">
             <span class="input-label">Filter by</span>
             <select ng-model="productsForm.filter" ng-change="receiveProducts( productsForm )">
-              <option>Featured</option>
+              <option selected="selected">Featured</option>
+              <option selected="selected">Gender</option>
             </select>
           </label>
         </form>
@@ -24,7 +25,7 @@
           </div>
           <div style="text-align:center;" class="show-list-numbers-and-dots">
             <p style="color:#000000;">{{ product.item_name }}
-              <strong>From ${{ product.starting_price }}</strong>
+              <strong>From ${{ product.starting_price.amount }}</strong>
             </p>
           </div>
         </div>

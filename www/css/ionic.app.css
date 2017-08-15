@@ -9997,3 +9997,7 @@ label > input.ng-invalid.ng-touched {
 .payment-tab--button {
   margin-left: 5px;
   margin-right: 5px; }
+
+.error-message {
+  color: red;
+  padding-top: 20px; }

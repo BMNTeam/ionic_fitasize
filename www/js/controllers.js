@@ -30,12 +30,17 @@ function ($scope, $stateParams, Auth, $http) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, Auth) {
-    
+    $scope.isError = false;
+    $scope.errorMessage = '';
     $scope.recoverPassword = function(recoveryForm) {
         Auth.recoverPassword( recoveryForm )
             .then(
                     (respond) => {
-                        console.log(respond)
+                        console.log(respond);
+                        $scope.isError = true;
+                        $scope.errorMessage = respond.data.message;
+                        $scope.$digest();
+                        $scope.$apply();
                     }
                 )
     }
@@ -68,24 +73,13 @@ function ($scope, $stateParams, ProductsService) {
     
     $scope.products =  new Object();
     
-    $scope.receiveProducts = function( productsForm ) {
-        var getProducts = ProductsService.getProducts();
-       
-        
-        getProducts.then(function(data) {
-            $scope.products = data;
-            $scope.$apply();
-            $scope.$digest();
-            
-            //alert(JSON.stringify($scope.products))
-        })
-    }
-    
-    $scope.viewItemList = function() {
-        ProductsService.viewItemList()
+    $scope.receiveProducts = function(productsForm) {
+        ProductsService.viewItemList(productsForm)
             .then(
                 (respond) => {
-                    console.log(respond)
+                  $scope.products = respond;
+                  $scope.$apply();
+                  $scope.$digest();
                 }
                 )
     }
@@ -145,6 +139,8 @@ function ($scope, $stateParams, ProductsService) {
             })
         ProductsService.loadBrandsSpecification();
     }
+
+
 }])
    
 .controller('cozyLooseTurtleneckTop2Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

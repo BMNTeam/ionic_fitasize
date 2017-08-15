@@ -8,7 +8,7 @@ angular.module('authenticationModule', [])
     var api = {
             urls: {
                 authorise: defaultRoute + 'business/login',
-                recoveryPassword: defaultRoute + '/profile/recover'
+                recoveryPassword: defaultRoute + '/business/recover'
             }
     }
     
